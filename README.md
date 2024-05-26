@@ -60,8 +60,9 @@ For the search part, the embedding is done on the query text and matches against
 You can change the models used for the description and embedding in `rerecall/config.py`.
 
 There is definitely room for improvement here:
-* There are plenty of hallucinations in the generated descriptions, this could be a combination of the size the MLLM used to generate the descriptions (I use a very small model because I have a rusty 1060), or because the screenshots are very high in resolutions (no resizing is done, after a screenshot).
+* There are plenty of hallucinations in the generated descriptions of screenshots, this could be a combination of the size the MLLM used to generate the descriptions (I use a very small model), or because the screenshots are very high in resolution.
 * The search is very basic, it just matches the embeddings of the query text with the embeddings of the screenshots, a potential improvement could be to use the model to enrich the user query with more information before embedding it for search.
+* I am fairly certain that Microsoft does not rely solely on screenshots as I do, but also captures of individual app windows, and also extracts meta information like window title & others, these could definitely improve the results.
 
 ### Results
 

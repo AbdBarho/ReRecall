@@ -7,11 +7,7 @@ ReRecall is a proof of concept for an open source implementation of Microsoft's 
 
 ### Requirements
 
-You need a modern python version and a docker installation with GPU support, the `docker-compose.yml` file is configured for nvidia gpus.
-I don't own any other GPU so I can't test it with other brands. Feel free to play around with it.
-
-I have ran this on a Windows 10 with a GTX 1060. No part of the code is os-specific so it should work fine on other systems.
-
+You need a modern python version and a docker installation with GPU support, the `docker-compose.yml` file is configured for nvidia gpus. I have ran this on a Windows 10 with a GTX 1060. No part of the code is os-specific so it should work fine on other systems. Feel free to play around.
 
 ### Setup
 
@@ -33,7 +29,7 @@ After the container downloads and starts, setup a virtual environment and instal
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-# or .venv\Scripts\Activate.ps1 on Windows Powershell
+# or .\.venv\Scripts\Activate.ps1 on Windows Powershell
 pip install -r requirements.txt
 ```
 
@@ -41,7 +37,7 @@ Now you can start the recording
 ```bash
 python rerecall/record.py
 ```
-By default it will caputure screenshots of all monitors every 60 seconds, see `rerecall/config.py` for all options you can change.
+By default it will capture screenshots of all monitors every 60 seconds, see `rerecall/config.py` for all options you can change.
 
 
 ### Search
@@ -72,8 +68,3 @@ There is definitely room for improvement here:
 Cherry picked, ignore the vertical monitor.
 
 ![image](./example.jpg)
-
-
-
-### License
-MIT

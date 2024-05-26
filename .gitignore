@@ -1,0 +1,5 @@
+/.venv
+/rerecall.egg-info
+__pycache__
+/screenshots
+/db

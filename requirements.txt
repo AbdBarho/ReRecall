@@ -1,0 +1,4 @@
+mss==9.*
+pillow==10.*
+ollama
+chromadb

@@ -1,0 +1,18 @@
+services:
+  ollama:
+    ports:
+      - 11434:11434
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+volumes:
+  ollama:

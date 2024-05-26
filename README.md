@@ -21,10 +21,10 @@ cd ReRecall
 
 Start Ollama
 ```bash
-docker compose up -d
+docker compose up
 ```
 
-After the container downloads and starts, setup a virtual environment and install the requirements
+Open another terminal, and setup a virtual environment and install the requirements:
 
 ```bash
 python -m venv .venv
@@ -42,7 +42,7 @@ By default it will capture screenshots of all monitors every 60 seconds, see `re
 
 ### Search
 
-After recording some data, you can search through it using the search script
+After recording some data, you can search through it using the search script. Ollama should be running in the background.
 
 ```bash
 python rerecall/query.py -n 1 my search query

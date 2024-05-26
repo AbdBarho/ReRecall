@@ -2,10 +2,10 @@ from time import time_ns
 from os import makedirs
 from datetime import datetime
 from time import sleep
+import ollama
 
 
 from config import IMAGE_DESCRIPTION_MODEL, EMBEDDING_MODEL, IMAGE_DESCRIPTION_PROMPT, SLEEP_TIME
-from query import query
 from utils.screenshot import get_screenshots
 from utils.ml import generate_description, generate_embedding
 from utils.db import collection
@@ -38,9 +38,9 @@ def loop():
 
 if __name__ == "__main__":
   print("Pulling model, might take a while...")
-  # ollama.pull(model)
+  ollama.pull(IMAGE_DESCRIPTION_MODEL)
   print("Pulling embedding model, might take a while...")
-  # ollama.pull(embedding_model)
+  ollama.pull(EMBEDDING_MODEL)
 
   makedirs("screenshots", exist_ok=True)
   loop()
